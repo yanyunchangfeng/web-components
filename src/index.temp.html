@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>燕云长风</title>
 </head>
+
 <body>
-   <p is="yycf-p" label="https://yanyunchangfeng.com" c="red"></p>
-   <cf-p label="燕云长风" c="red"></cf-p>
-   <yycf-div></yycf-div>
-   <template id="yycf-p">
-       <p>长风几万里，吹度玉门关。</p>
-       <style>
-           p{
-               color: aqua;
-           }
-       </style>
-   </template>
+    <p is="yycf-p" label="https://yanyunchangfeng.com" c="red"></p>
+    <cf-p label="燕云长风" c="red"></cf-p>
+    <yycf-div>
+
+    </yycf-div>
+    <template id="yycf-p">
+        <p>长风几万里，吹度玉门关。</p>
+        <style>
+            p {
+                color: aqua;
+            }
+        </style>
+    </template>
+    <template id="ycf">
+        <style>
+            p {
+                color: white;
+                background-color: aqua;
+                padding: 5px;
+            }
+        </style>
+        <p><slot name="des">default</slot></p>
+    </template>
+    <ycf-d>
+       <span slot="des">一曲关山月，穿越几千年</span>
+    </ycf-d>
+    <ycf-d>
+       <ul slot="des">
+        <li>一曲关山月</li>
+        <li>穿越几千年</li>
+    </ul>
+    </ycf-d>
 </body>
+
 </html>

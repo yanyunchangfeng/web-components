@@ -83,3 +83,17 @@ function  updateStyle(elem:any) {
     }
     customElements.define('yycf-div',YycfDiv)
 }
+{
+
+    class YycfD extends HTMLElement{
+        constructor(){
+            super()
+            // 3、HTML templates 和 slot（插槽） 结合web components 的使用。
+            const template = document.getElementById('ycf');
+            const templateContent =(template as any) .content;
+            const shadow = this.attachShadow({mode:'open'});
+            shadow.appendChild(templateContent.cloneNode(true))
+        }
+    }
+    customElements.define('ycf-d',YycfD)
+}
